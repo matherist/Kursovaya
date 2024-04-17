@@ -1,0 +1,50 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="second-part" id="about">
+    <div class="second-wrapper">
+    <h2>о  "Sierra"</h2>
+    <div class="line"></div>
+    <div class="second-info">
+        <div class="descr-info">
+            <img src="{% static 'images/coffee-cup.png' %}" alt="" class="second-img">
+            <h3>Вкусный кофе</h3>
+            <p class="descr-text">Sierra - это вкусный кофе</p>
+            <button class="next-btn"><a href="{% url 'menu' %}" class="next-btn">Далее...</a></button>
+
+        </div>
+        <div class="descr-info">
+            <img src="{% static 'images/open-book.png' %}" alt="" class="second-img">
+            <h3>Наша история</h3>
+            <p class="descr-text">История «Sierra» началась в 2010 году…</p>
+            <button class="next-btn"><a href="{% url 'history' %}" class="next-btn">Далее...</a></button>
+
+        </div>
+        <div class="descr-info">
+            <img src="{% static 'images/heart.png' %}" alt="" class="second-img">
+            <h3>Наши филиалы</h3>
+            <p class="descr-text">По городу имеется несколько точек...</p>
+            <button class="next-btn"><a href="{% url 'contacts' %}" class="next-btn">Далее...</a></button>
+
+        </div>
+        <div class="descr-info">
+            <img src="{% static 'images/check.png' %}" alt="" class="second-img">
+            <h3>Наши гарантии</h3>
+            <p class="descr-text">Мы гарантируем нашим посетителям…</p>
+            <button class="next-btn"><a href="{% url 'about' %}" class="next-btn">Далее...</a></button>
+
+
+        </div>
+        <div class="descr-info">
+            <img src="{% static 'images/people.png' %}" alt="" class="second-img">
+            <h3>Участие в общественной жизни</h3>
+            <p class="descr-text">«Sierra» с первого дня готова помогать …</p>
+            <button class="next-btn"><a href="{% url 'history' %}" class="next-btn">Далее...</a></button>
+
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock content %}

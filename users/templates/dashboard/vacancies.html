@@ -1,0 +1,74 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+{% block head %}
+<style>
+  h3{
+    background-color: antiquewhite;
+  }
+.vacancies {
+    max-width: 100%;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .cardi {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+  
+  .cardi:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .cardi-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .cardi-body {
+    padding: 20px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .cardi-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .cardi-text {
+    line-height: 1.5;
+  }
+  
+</style>
+
+{% endblock %}
+<h3>По всем вопросам пишем <a href="mailto:sierra.recruiter@cafe.kg">sierra.recruiter@cafe.kg</a></h3>
+<div class="vacancies">
+    {% for vacancy in vacancies %}
+    <div class="cardi">
+        <div class="cardi-header">
+            {{ vacancy.title }}
+        </div>
+        <div class="cardi-body">
+            <h5 class="cardi-title">{{ vacancy.category }}</h5>
+            <p class="cardi-text">{{ vacancy.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="location" id="geo">
+    <!-- <div class="location-wrapper"> -->
+        <h3 class="location-title">Как нас найти?</h3>
+        <div class="location-descr">
+            <div class="location-info">
+                <img src="{% static 'images/location-logo.png' %}" alt="" class="location-logo">
+                <h3 class="loc-title">Манас 57/1</h3>
+                <p class="location-text">рядом с Посольством Российской Федерации</p>
+            </div>
+            <div class="location-info">
+                <img src="{% static 'images/location-logo.png' %}" alt="" class="location-logo">
+                <h3 class="loc-title">Душанбинка</h3>
+                <p class="location-text">ул. Токтоналиева 62/2</p>
+            </div>
+            <div class="location-info">
+                <img src="{% static 'images/location-logo.png' %}" alt="" class="location-logo">
+                <h3 class="loc-title">Orion Бизнес Центр</h3>
+                <p class="location-text">просп. Эркиндик, 21</p>
+            </div>
+            <div class="location-info">
+                <img src="{% static 'images/location-logo.png' %}" alt="" class="location-logo">
+                <h3 class="loc-title">АУЦА</h3>
+                <p class="location-text">Новый кампус: ул. Аалы Токомбаева 7/6</p>
+            </div>
+            <div class="location-info">
+                 <img src="{% static 'images/location-logo.png' %}" alt="" class="location-logo">
+                <h3 class="loc-title">Ак-Эмир</h3>
+                <p class="location-text">ул. Московская 69</p>
+            </div>
+        </div>
+    <!-- </div> -->
+    
+</section>
+{% endblock content %}

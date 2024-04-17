@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sierra{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/tyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tyle.css.map' %}">
+    <link rel="stylesheet" href="{% static 'sass/style.scss' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% block head %}
+   
+    {% endblock %}
+</head>
+<body>
+    <section class="intro">
+        <header>
+          <div class="intro-logo">
+            <img src="{% static 'images/header_logo.png' %}" alt="">
+        </div>
+            <nav>
+                <a href="{% url 'orders' %}" class="nav-link">Заказать</a>
+                <a href="{% url 'home' %}" class="nav-link">Главная</a>
+                <a href="{% url 'about' %}" class="nav-link">О нас</a>
+                <a href="{% url 'geo' %}" class="nav-link">Как нас найти</a>
+                <a href="{% url 'inter' %}" class="nav-link">Интерьер</a>
+                <a href="{% url 'contacts' %}" class="nav-link">Контакты</a>
+                <a href="{% url 'vacancies' %}" class="nav-link">Вакансии</a>
+                <a href="{% url 'menu' %}" class="nav-link">Меню</a>
+            </nav>
+        </header>
+        <h1>Sierra Coffee</h1>
+        <p class="intro-text">eat.drink.enjoy.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" style="margin-top:15px;">
+                <img src="{% static 'images/facebook-app-symbol.png' %}" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/sierra.kg/" target="_blank">
+                <img src="{% static 'images/instagram (2).png' %}" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img src="{% static 'images/twitter.png' %}" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="{% static 'images/network.png' %}" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" class="social-icon">
+            </a>
+        </div>
+        
+    </section>
+    {% block content %}
+    <!-- Default content goes here -->
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

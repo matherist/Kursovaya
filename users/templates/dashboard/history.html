@@ -1,0 +1,39 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+{% block header %}
+<style>
+      .container {
+            max-width: 100%;
+            background-color: antiquewhite;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .image {
+            width: 30%; /* Adjust as needed */
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .text {
+            text-align: justify;
+            line-height: 1.5;
+        }
+</style>
+{% endblock %}
+<div class="container">
+    <img src="https://st-0.akipress.org/st_runews/.storage/limon3/images/APRIL2023/035eccca84f38f0e42718ae6f7ccd88f.jpg" alt="" class="image">
+    <img src="https://st-0.akipress.org/st_runews/.storage/limon3/images/APRIL2023/9453b460087bc4140c024a0feadb192a.png" alt="" class="image">
+    <img src="https://media.gody.vn/images/bishkek/quan-cafe-sierra-sierra-coffee/f9d98a79aae60ac8d520b8a75ec13a4c08a01925.jpg" alt="" class="image">
+</div>
+<div class="container">
+    <p class="text">
+        Идея создания SIERRA зародилась, когда Брэд после окончания университета в 1994 году в течение года работал преподавателем английского языка. В течение этого года в Ташкенте, Узбекистан, он решил продлить свой контракт, а также, на второй день пребывания в стране, Брэд встретил Амаль.
+        С 1994 по 2010 год Брэд и Амаль встречались, поженились в 1999 году и работали на разных работах.  Но идея создания SIERRA восходит к первому опыту Брэда в Москве и Алматы в 1992 году и жизни в Узбекистане в 1994 году: полное отсутствие кофе и современной кофейной культуры в бывшем Советском Союзе.
+        После работы, размышлений, планирования и накопления капитала, Брэд и Амаль переехали в Бишкек летом 2010 года и открыли первую из двух компаний, Bishkek Coffee Roasters, первую компанию по обжарке кофе в Кыргызской Республике.
+        Немного позже SIERRA официально родилась с кофейными киосками и первым полноценным кафе на улице Манаса, рядом с посольством Российской Федерации.
+    </p>
+</div>
+
+{% endblock content %}

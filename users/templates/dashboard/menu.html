@@ -1,0 +1,38 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block content %}
+{% block head %}
+<style>
+    .cards{
+        max-width: 100%;
+        background-color: rgb(250, 237, 222);
+    }
+    .card__image img {
+        width: 300px; 
+        height: 180px; 
+        object-fit: cover; 
+    }
+</style>
+{% endblock %}
+<div class="cards">
+    {% for item in menu %}
+    <div class="card">
+        <div class="card__top">
+            <a href="#" class="card__image">
+                <img src="{{ item.image_url }}" alt="{{ item.title }}">
+            </a>
+            <div class="card__label">{{ item.price }}</div>
+        </div>
+        <div class="card__bottom">
+            <div class="card__price card__price--discount">{{ item.description }}</div>
+            <a href="#" class="card__title">
+                {{ item.title }}, {{ item.category }}
+            </a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No items found.</p>
+    {% endfor %}
+</div>
+{% endblock %}

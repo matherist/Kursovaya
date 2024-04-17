@@ -1,0 +1,78 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+{% block head %}
+<style>
+.contacts {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.card {
+    margin-left: 40px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    line-height: 1.5;
+}
+
+</style>
+
+{% endblock %}
+<div class="contacts">
+    {% for contact in contacts %}
+    <div class="card">
+        <div class="card-header">
+            {{ contact.title }}
+        </div>
+        <div class="card-body">
+            <img src="{{ contact.image_url }}" alt="{{ contact.title }}" class="card-img">
+            <h5 class="card-title">{{ contact.category }}</h5>
+            <p class="card-text">{{ contact.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
